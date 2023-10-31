@@ -1,0 +1,61 @@
+
+body {
+    background-color: #d7d7d7;
+    color: black;
+    
+}
+main{
+    width:75%;
+    padding-left:220px;
+}
+.sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 36px;
+    margin-left: 20px;
+}
+.OpenNav{
+    font-size:30px;
+    cursor:pointer;
+    
+
+}
+.row {
+    display: flex;
+    box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+    box-sizing: border-box;
+    flex: 33.33%;
+    padding: 0;
+  }
