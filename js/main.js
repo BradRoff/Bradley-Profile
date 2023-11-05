@@ -75,3 +75,20 @@ function SwitchButtons(buttonId) {
         });
     });
     
+    $(document).ready(function() {
+        // Get references to the HTML elements
+        const textContainer = $("#text-container");
+        const changeTextLinks = $(".change-text-link");
+        const spanContainer = $("#span-container")
+        // Add a click event listener to the links
+        changeTextLinks.on("click", function(event) {
+            event.preventDefault(); // Prevent the link from navigating
+    
+            // Get the new text from the data attribute of the clicked link
+            const newHeaderText = $(this).data("new-text");
+            const newSpanText= $(this).data("new-span");
+            // Change the text in the container to the new text
+            textContainer.text(newHeaderText);
+            spanContainer.text(newSpanText);
+        });
+    });
