@@ -1,9 +1,10 @@
 
 body {
-    background-color: #d7d7d7;
+    background-color: #f7f1f1;
     color: black;
     transition: 1s;
     max-width: 700px;
+    font-family: "Courier New", Courier, monospace;
 }
 #wholepage{
     margin-left: auto;
@@ -46,7 +47,7 @@ main{
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #e06868;
 }
 
 .closebtn {
@@ -95,9 +96,25 @@ main{
 footer{
     padding-left:220px;
 }
+.change-text-link-set1, .change-text-link-set2{
+color: #32AAE1;
+font-weight: bold;
+
+}
 @media screen and (max-width: 768px) {
     /* CSS rules for screens with a maximum width of 768 pixels */
     body {
       background-color: lightblue;
     }
   }
+p{
+    font-size: 20px;
+}
+span{
+   
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
