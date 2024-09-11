@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Your reCAPTCHA secret key
-    $recaptcha_secret = 'YOUR_SECRET_KEY';  // Replace with your actual secret key
+    $recaptcha_secret = '6Lf3OT8qAAAAAKs8WuLcGt8B8RClQo2U-hZyBwIl';  
     $recaptcha_response = filter_input(INPUT_POST, 'g-recaptcha-response', FILTER_SANITIZE_STRING);
 
     // Verify the reCAPTCHA response
