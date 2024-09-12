@@ -21,7 +21,7 @@
   <div class = "container mt-5">
     <h1>Contact me</h1>
     <!-- provides spacing between each row via g-#-->
-    <form class = "row g-3" action = "https://formsubmit.co/3d6b734796a308f3c4f8a3666d08a29a" method="POST">
+    <form class = "row g-3" action = "https://formsubmit.co/3d6b734796a308f3c4f8a3666d08a29a" method="POST" id ="emailForm">
       <!--honeypot -->
       <input type = "text" name = "_honEy" style = "display:none">
 
@@ -46,7 +46,8 @@
       </div>
       <div class = "col-md-4">
         <label for = "phoneNumber" class="form-label">Phone number: </label>
-        <input type="tel" id="phoneNumber" class = "form-control" name="phoneNumber" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" name= "Phone&nsbp;Number">
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required name= "Phone&nsbp;Number"
+          placeholder ="###-###-####"/>
       </div>
       <div class = "col-md-12">
         <label for = "message" class="form-label">Leave me a message! </label>
@@ -64,6 +65,28 @@
     
 </footer>
 </body>
+<script>
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            var emailInput = document.getElementById('email');
+            var phoneInput = document.getElementById('phone');
+            var isValid = true;
 
+            // Validate email
+            if (!emailInput.checkValidity() &&  phoneInput.value.trim() =! '') {
+                alert('Please enter a valid email address in the format example@example.com.');
+                isValid = false;
+            }
 
+            // Validate phone number
+            if (!phoneInput.checkValidity()) {
+                alert('Please enter a valid phone number in the format 123-456-7890.');
+                isValid = false;
+            }
+
+            // Prevent form submission if invalid
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </div>
