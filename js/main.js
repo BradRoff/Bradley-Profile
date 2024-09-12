@@ -131,7 +131,7 @@ handleTextLinks(textlinks1, currentlyVisibleDivId1);
 /*
    script for email fourm
 */
-<script>
+
         document.getElementById('emailForm').addEventListener('submit', function(event) {
             var emailInput = document.getElementById('email');
             var phoneInput = document.getElementById('phone');
@@ -154,4 +154,4 @@ handleTextLinks(textlinks1, currentlyVisibleDivId1);
                 event.preventDefault();
             }
         });
-    </script>
+
