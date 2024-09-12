@@ -1,7 +1,7 @@
 <?php
 // Google reCAPTCHA API key configuration
-$siteKey 	= '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
-$secretKey 	= '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
+$siteKey 	= '6Lf3OT8qAAAAAKs8WuLcGt8B8RClQo2U-hZyBwIl';
+$secretKey 	= '6Lf3OT8qAAAAAA80uZROuFoNBx4RmYn8wyTRmiPK';
 
 // Email configuration
 $toEmail = 'admin@example.com';
