@@ -1,4 +1,3 @@
- index.php 
 <?php include_once 'sendemail.php'; ?>
 
 <!DOCTYPE html>
