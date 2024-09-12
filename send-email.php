@@ -4,9 +4,9 @@ $siteKey 	= '6Lf3OT8qAAAAAKs8WuLcGt8B8RClQo2U-hZyBwIl';
 $secretKey 	= '6Lf3OT8qAAAAAA80uZROuFoNBx4RmYn8wyTRmiPK';
 
 // Email configuration
-$toEmail = 'admin@example.com';
-$fromName = 'Sender Name';
-$formEmail = 'sender@example.com';
+$toEmail = 'bradleyrock321@gmail.com';
+$fromName = 'brad';
+$formEmail = 'bradleyrock321@gmail.com';
 
 $postData = $statusMsg = $valErr = '';
 $status = 'error';
