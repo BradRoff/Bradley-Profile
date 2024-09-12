@@ -1,12 +1,12 @@
 <?php
 // Google reCAPTCHA API key configuration
-$siteKey 	= '6Lf3OT8qAAAAAKs8WuLcGt8B8RClQo2U-hZyBwIl';
-$secretKey 	= '6Lf3OT8qAAAAAA80uZROuFoNBx4RmYn8wyTRmiPK';
+$siteKey 	= '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
+$secretKey 	= '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
 
 // Email configuration
-$toEmail = 'bradleyrock321@gmail.com';
-$fromName = 'brad';
-$formEmail = 'bradleyrock321@gmail.com';
+$toEmail = 'admin@example.com';
+$fromName = 'Sender Name';
+$formEmail = 'sender@example.com';
 
 $postData = $statusMsg = $valErr = '';
 $status = 'error';
