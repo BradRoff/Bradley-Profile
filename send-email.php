@@ -23,7 +23,7 @@ if (!$captcha || $response.success == false) {
         if (!$email) {
             echo "Invalid Sender's Email";
         } else {
-            $to = 'johdoe@example.com';
+            $to = 'bradleyrock321@gmail.com';
             $subject = 'Test';
             $message = $_POST['msg'];
             $headers = 'From:' . $email . "\r\n";
