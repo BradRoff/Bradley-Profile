@@ -1,43 +1,62 @@
 <?php
-//Checking For reCAPTCHA
-$captcha;
-if (isset($_POST['g-recaptcha-response'])) {
-    $captcha = $_POST['g-recaptcha-response'];
+// Google reCAPTCHA API key configuration
+$siteKey 	= '6Lf3OT8qAAAAAKs8WuLcGt8B8RClQo2U-hZyBwIl';
+$secretKey 	= '6Lf3OT8qAAAAAA80uZROuFoNBx4RmYn8wyTRmiPK';
+
+// Email configuration
+$toEmail = 'admin@example.com';
+$fromName = 'Sender Name';
+$formEmail = 'sender@example.com';
+
+$postData = $statusMsg = $valErr = '';
+$status = 'error';
+
+// If the form is submitted
+if(isset($_POST['submit'])){
+    // Get the submitted form data
+    $postData = $_POST;
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $subject = trim($_POST['subject']);
+    $message = trim($_POST['message']);
+		
+		// Validate reCAPTCHA box
+		if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
+
+			// Verify the reCAPTCHA response
+			$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
+			
+			// Decode json data
+			$responseData = json_decode($verifyResponse);
+			
+			// If reCAPTCHA response is valid
+			if($responseData->success){
+				
+				$subject = 'New contact request submitted';
+				$htmlContent = "
+					<h2>Contact Request Details</h2>
+					<p><b>Name: </b>".$name."</p>
+					<p><b>Email: </b>".$email."</p>
+                    <p><b>Subject: </b>".$subject."</p>
+					<p><b>Message: </b>".$message."</p>
+				";
+				
+				// Always set content-type when sending HTML email
+				$headers = "MIME-Version: 1.0" . "\r\n";
+				$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+				// More headers
+				$headers .= 'From:'.$fromName.' <'.$formEmail.'>' . "\r\n";
+				
+				// Send email
+				@mail($toEmail, $subject, $htmlContent, $headers);
+				
+				$status = 'success';
+				$statusMsg = 'Thank you! Your contact request has submitted successfully, we will get back to you soon.';
+				$postData = '';
+			}else{
+				$statusMsg = 'Robot verification failed, please try again.';
+			}
+		}else{
+			$statusMsg = 'Please check on the reCAPTCHA box.';
+		}
 }
-// Checking For correct reCAPTCHA
-$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=SECRETKEY&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']);
-if (!$captcha || $response.success == false) {
-    echo "Your CAPTCHA response was wrong.";
-    exit ;
-} else {
-    // Checking For Blank Fields..
-    if ($_POST["vname"] == "" || $_POST["vemail"] == "" || $_POST["msg"] == "") {
-        echo "Fill All Fields..";
-    } else {
-        // Check if the "Sender's Email" input field is filled out
-        $email = $_POST['vemail'];
-        // Sanitize E-mail Address
-        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-        // Validate E-mail Address
-        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-        if (!$email) {
-            echo "Invalid Sender's Email";
-        } else {
-            $to = 'bradleyrock321@gmail.com';
-            $subject = 'Test';
-            $message = $_POST['msg'];
-            $headers = 'From:' . $email . "\r\n";
-            // Sender's Email
-            // Message lines should not exceed 70 characters (PHP rule), so wrap it
-            $message = wordwrap($message, 70, "\r\n");
-            // Send Mail By PHP Mail Function
-            if (mail($to, $subject, $message, $headers)) {
-                echo "Your mail has been sent successfully!";
-            } else {
-                echo "Failed to send email, try again.";
-                exit ;
-            }
-        }
-    }
-}
-?>
