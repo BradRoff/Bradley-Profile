@@ -1,14 +1,49 @@
-//         Bootstrap JS and dependencies 
+/* script.js */
+
+function openNav() {
+    document.querySelector(".sidenav").style.width = "220px";
+}
+
+function closeNav() {
+    document.querySelector(".sidenav").style.width = "0";
+}
+/*
+var MenuChoice ="";
+function SwitchButtons(buttonId) {
+    var hideBtn;   showBtn;
+    
+    if (buttonId == 'moonEBtn') {
+        MenuChoice ="Norm"
+      showBtn = 'sunBtn';
+      hideBtn = 'moonEBtn';
+      
+      document.body.style.backgroundColor = "#A9A9A9";
+      // Calling the jquery function with Javscript function
+     
+    } else if  (buttonId == 'sunBtn'){
+        MenuChoice ="Bright"
+      showBtn = 'moonFBtn';
+      hideBtn = 'sunBtn';
+      
+      document.body.style.backgroundColor =  "#B3D9D9";
+      
+    }
+    else if  (buttonId == 'moonFBtn'){
+        MenuChoice ="Dark"
+      showBtn = 'moonEBtn'; 
+      hideBtn = 'moonFBtn';
+      document.body.style.backgroundColor = "#25383C";
+
+    }
+    
+    $.jQueryChange(MenuChoice);
+    //I don't have your menus, so this is commented out.  just uncomment for your usage
+    // document.getElementById(menuToggle).toggle(); //step 1: toggle menu
+    document.getElementById(hideBtn).style.display = 'none'; //step 2 :additional feature hide button
+    document.getElementById(showBtn).style.display = ''; //step 3:additional feature show button
    
-
-      function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-
+  }
+*/
 $(document).ready(function() {
     $("#normal").click(function() {
         $(this).hide();
@@ -127,4 +162,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 handleTextLinks(textlinks2, currentlyVisibleDivId2);
 handleTextLinks(textlinks1, currentlyVisibleDivId1);
-
