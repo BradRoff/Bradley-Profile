@@ -127,3 +127,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 handleTextLinks(textlinks2, currentlyVisibleDivId2);
 handleTextLinks(textlinks1, currentlyVisibleDivId1);
+
+/*
+   script for email fourm
+*/
+<script>
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            var emailInput = document.getElementById('email');
+            var phoneInput = document.getElementById('phone');
+            var isValid = true;
+
+            // Validate email
+            if (!emailInput.checkValidity() &&  phoneInput.value.trim() =! '') {
+                alert('Please enter a valid email address in the format example@example.com.');
+                isValid = false;
+            }
+
+            // Validate phone number
+            if (!phoneInput.checkValidity()) {
+                alert('Please enter a valid phone number in the format 123-456-7890.');
+                isValid = false;
+            }
+
+            // Prevent form submission if invalid
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
