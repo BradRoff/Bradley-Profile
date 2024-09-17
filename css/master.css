@@ -1,123 +1,190 @@
-/*
-original version of cssfile before bootstrap
-*/
-body {
-    background-color: #f7f1f1;
-    color: black;
-    transition: 1s;
-    max-width: 700px;
-    font-family: "Courier New", Courier, monospace;
-    text-align: center;
-}
-#wholepage{
-    margin-left: auto;
-    margin-right:auto;
-    min-width: 1280px;
-    max-width: 1920px;
-}
-button{
-    border:none;
-    background-color:red;
-}
-#test{
-    color:red;
-}
-main{
-    width:75%;
-    padding-left:220px;
-}
-.sidenav {
-    height: 100%;
-    width: 0px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #e06868;
-}
-
-.closebtn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 36px;
-    margin-left: 20px;
-}
-.OpenNav{
-    font-size:30px;
-    cursor:pointer;
-    
-
-}
-
-#rowIcon {
-    display: flex;
-    box-sizing: border-box;
-    width:25%;
-    padding-bottom:10px;
-    margin-left: 25%;
-  }
-  
-  /* Create three equal columns that sits next to each other */
-  .column {
-    box-sizing: border-box;
-    flex: 33.33%;
-    padding: 0;
-    width: 60px; /* Larger width on hover */
-    height: 60px; /* Larger height on hover */
-  }
-
-  img{
-    color:red;
-  }
-  .icon {
-    width: 50px; /* Default width */
-    height: 50px; /* Default height */
-    transition: all 0.5s ease; /* Transition on all properties */
-}
-
-.icon:hover {
-    width: 60px; /* Larger width on hover */
-    height: 60px; /* Larger height on hover */
-}
-footer{
-    padding-left:220px;
-}
-.change-text-link-set1, .change-text-link-set2{
-color: #32AAE1;
-font-weight: bold;
-
-}
-@media screen and (max-width: 768px) {
-    /* CSS rules for screens with a maximum width of 768 pixels */
+    /*
+    original version of cssfile before bootstrap
+    */
     body {
-      background-color: lightblue;
+        background-color: #f7f1f1;
+        color: black;
+        transition: 1s;
+        
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
     }
-  }
-p{
-    font-size: 20px;
-}
-span{
-   
-    color: red;
-    font-size: 20px;
-    font-weight: bold;
+    button{
+        border:none;
+        background-color:red;
+    }
 
-}
+    .closebtn {
+        top: 10px;
+        left: 10px;
+        font-size: 36px;
+        margin-left: 20px;
+    }
+     /* Create three equal columns that sits next to each other */
+     .column {
+        box-sizing: border-box;
+        flex: 33.33%;
+        padding: 0;
+        width: 60px; /* Larger width on hover */
+        height: 60px; /* Larger height on hover */
+    }
+    /*scale up closenave btn*/
+    #closeNav{
+    scale:220%;
+    }
+    .change-text-link-set1, .change-text-link-set2{
+        color: #32AAE1;
+        font-weight: bold;
+    
+        
+    }
+    
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0;
+    }
+    .form-row {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        width: 100%; /* Ensure each row takes up full width */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+
+    }
+    .form-box {
+        
+        padding: 1rem;
+        margin: 0.5rem;
+        text-align: center;
+        width: 200px; /* Fixed width for consistency */
+        height: 100px; /* Fixed height for consistency */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+        overflow: hidden; /* Prevent overflow of content */
+    }
+    .icon {
+        width: 50px; /* Default width */
+        height: 50px; /* Default height */
+        transition: all 0.5s ease; /* Transition on all properties */
+    }
+    .icon:hover {
+        width: 60px; /* Larger width on hover */
+        height: 60px; /* Larger height on hover */
+    }
+    .iconForm{
+        
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+    }
+  
+    #rowIcon {
+        display: flex;
+        text-align: center;
+        box-sizing: border-box;
+        
+
+    }
+  
+
+
+    main{
+        width:75%;
+        padding-left:220px;
+    }
+    
+
+    .OpenNav{
+        font-size:30px;
+        cursor:pointer;
+        
+
+    }
+      
+    p{
+        font-size: 20px;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #e06868;
+    }
+
+   
+
+    @media screen and (max-width: 768px) {
+        /* CSS rules for screens with a maximum width of 768 pixels */
+        body {
+        background-color: lightblue;
+        }
+    }
+   
+    span{
+    
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+    
+
+
+
+    @media screen and (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+        }
+        .navbar a {
+            margin: 0.5rem 0;
+        }
+        .form-row {
+            flex-direction: column;
+        }
+    }
+
+    span a {
+        color: inherit; /* Inherits the text color from the span */
+        font-size: inherit; /* Inherits the font size from the span */
+        font-family: inherit; /* Inherits the font family from the span */
+        background-color: inherit; /* Inherits the background color from the span */
+        padding: inherit; /* Inherits padding from the span */
+        text-decoration: none; /* Removes underline from the link */
+    }
+    
+    /* Optional: Ensure link retains styling in various states */
+    span a:visited {
+        color: inherit; /* Color for visited links */
+    }
+    
+    span a:hover {
+        color: inherit; /* Color for hovered links */
+        text-decoration: none; /* Underline removal on hover */
+    }
+    
+    span a:active {
+        color: inherit; /* Color for active links */
+    }
+
+    
+    
