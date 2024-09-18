@@ -78,6 +78,14 @@
         justify-content: center; /* Center items horizontally */
         align-items: center; /* Center items vertically */
     }
+    .left{
+
+    text-align: left; /* for text */
+    margin: 0;        /* remove centering from block elements */
+    display: inline;  /* if it was block-level */
+        /* Example of removing center alignment */
+
+    }
   
     #rowIcon {
         display: flex;
