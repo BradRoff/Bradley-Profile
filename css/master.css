@@ -82,8 +82,7 @@
 
     text-align: left; /* for text */
     margin: 0;        /* remove centering from block elements */
-    display: inline;  /* if it was block-level */
-        /* Example of removing center alignment */
+ 
 
     }
   
@@ -112,7 +111,7 @@
       
     p{
         font-size: 20px;
-        text-align:left;
+
     }
     .sidenav {
         height: 100%;
