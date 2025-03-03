@@ -62,7 +62,7 @@
         height: 100px; /* Fixed height for consistency */
         box-sizing: border-box; /* Include padding and border in the element's total width and height */
         flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
-        overflow: hidden; /* Prevent overflow of content */
+        /*overflow: hidden; /* Prevent overflow of content */
     }
     .icon {
         width: 50px; /* Default width */
